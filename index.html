@@ -57,8 +57,6 @@
       min-height: 100vh;
     }
 
-    /* LEFT PROFILE COLUMN */
-
     .sidebar {
       padding: 58px 38px 50px 8px;
       border-right: 1px solid var(--rule);
@@ -122,8 +120,6 @@
       font-size: .9rem;
     }
 
-    /* MAIN CONTENT */
-
     main {
       padding: 58px 0 80px 62px;
       min-width: 0;
@@ -147,22 +143,9 @@
       margin: 0 0 15px;
     }
 
-    .focus-label {
-      margin-top: 22px;
-      color: var(--muted);
+    .research-intro {
+      margin-bottom: 29px;
     }
-
-    .focus-list {
-      margin: 8px 0 0;
-      padding-left: 1.2rem;
-    }
-
-    .focus-list li {
-      margin: 5px 0;
-      padding-left: 2px;
-    }
-
-    /* RESEARCH */
 
     .research-group {
       margin-top: 31px;
@@ -200,7 +183,20 @@
       color: var(--muted);
     }
 
-    /* MOBILE / TABLET */
+    .advisor-link {
+      margin-top: 60px;
+      font-size: 0.85em;
+    }
+
+    .advisor-link a {
+      color: #9a9a9a;
+      text-decoration: none;
+    }
+
+    .advisor-link a:hover {
+      color: #666666;
+      text-decoration: underline;
+    }
 
     @media (max-width: 800px) {
       .page {
@@ -272,28 +268,18 @@
         </p>
       </section>
 
-      <section id="interests">
-        <h2 class="section-heading">Research Interests</h2>
-
-        <p>
-          My research examines how environmental and energy-related risks are priced,
-          regulated, and distributed across households and markets. Much of my work
-          intersects with and draws from household finance, housing economics, industrial organization,
-          and insurance economics.
-        </p>
-
-        <p class="focus-label">Current topical areas of focus include:</p>
-
-        <ul class="focus-list">
-          <li>Energy costs and household financial distress</li>
-          <li>Climate risk in property and casualty insurance markets</li>
-          <li>Market structure, regulation, and consumer welfare in the U.S. electricity sector</li>
-          <li>Non-market valuation methodology, with a focus on revealed preference methods such as hedonics and sorting models</li>
-        </ul>
-      </section>
-
       <section id="research">
         <h2 class="section-heading">Research</h2>
+
+        <div class="research-intro">
+          <p>
+            My primary area of study is energy and environmental economics, with much of my work intersecting with and drawing from household finance, industrial organization, insurance economics, and urban and real estate economics. I am broadly interested in how environmental and energy-related risks are priced, regulated, and distributed across households and markets.
+          </p>
+
+          <p>
+            My professional experience conducting economic research in policy-focused settings informs the lines of inquiry I choose to pursue and has shaped an approach to research that is grounded in institutional and policy context.
+          </p>
+        </div>
 
         <div class="research-group">
           <h3 class="research-subheading">Working Papers</h3>
@@ -354,6 +340,10 @@
           </ul>
         </div>
       </section>
+
+      <div class="advisor-link">
+        <a href="YOUR-GOOGLE-DRIVE-FOLDER-LINK" target="_blank" rel="noopener">For Advisors</a>
+      </div>
     </main>
   </div>
 </body>
