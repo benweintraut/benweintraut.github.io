@@ -67,13 +67,15 @@
     }
 
     .headshot-wrap {
-      width: 126px;
-      height: 126px;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #f1f2f3;
-      margin-bottom: 24px;
-    }
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f1f2f3 url("headshot.jpeg") center center / cover no-repeat;
+  margin-bottom: 24px;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
     .headshot {
       width: 100%;
@@ -232,8 +234,9 @@
   <div class="page">
 
     <aside class="sidebar">
-      <div class="headshot-wrap">
-        <img class="headshot" src="headshot.jpeg" alt="Ben Weintraut">
+      <div class="headshot-wrap"
+     role="img"
+     aria-label="Ben Weintraut">
       </div>
 
       <h1 class="name">Ben Weintraut</h1>
