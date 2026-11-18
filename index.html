@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,22 +68,14 @@
     }
 
     .headshot-wrap {
-  width: 126px;
-  height: 126px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #f1f2f3 url("headshot.jpeg") center center / cover no-repeat;
-  margin-bottom: 24px;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-    .headshot {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
+      width: 126px;
+      height: 126px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #f1f2f3 url("headshot.jpeg") center center / cover no-repeat;
+      margin-bottom: 24px;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .name {
@@ -185,6 +178,61 @@
       color: var(--muted);
     }
 
+    /* Working paper abstracts and PDF links */
+
+    .research-list li.paper-entry {
+      margin-bottom: 13px;
+    }
+
+    .paper-actions {
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      margin-top: 3px;
+      font-size: 0.85rem;
+    }
+
+    .paper-actions details {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      min-width: 0;
+    }
+
+    .paper-actions summary {
+      width: fit-content;
+      list-style: none;
+      cursor: pointer;
+      color: var(--link);
+    }
+
+    .paper-actions summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .paper-actions > a {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: start;
+      align-self: start;
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .paper-actions summary:hover,
+    .paper-actions > a:hover {
+      color: #183f5b;
+      text-decoration: underline;
+    }
+
+    .paper-abstract {
+      margin: 12px 0 8px;
+      max-width: 680px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    /* Advisor link */
+
     .advisor-link {
       margin-top: 60px;
       font-size: 0.85em;
@@ -235,8 +283,8 @@
 
     <aside class="sidebar">
       <div class="headshot-wrap"
-     role="img"
-     aria-label="Ben Weintraut">
+           role="img"
+           aria-label="Ben Weintraut">
       </div>
 
       <h1 class="name">Ben Weintraut</h1>
@@ -244,8 +292,8 @@
       <p class="affiliation">Duke University</p>
 
       <div class="profile-links">
-      <a href="mailto:ben.weintraut@duke.edu">ben.weintraut@duke.edu</a>
-      <div class="pronunciation">Pronunciation: WINE-trout</div>
+        <a href="mailto:ben.weintraut@duke.edu">ben.weintraut@duke.edu</a>
+        <div class="pronunciation">Pronunciation: WINE-trout</div>
       </div>
 
     </aside>
@@ -279,25 +327,61 @@
           <p>
             My primary area of study is energy and environmental economics. Much of my work intersects with and draws from household finance, industrial organization, insurance economics, and urban and real estate economics. I am broadly interested in how environmental and energy-related risks are priced, regulated, and distributed across households and markets.
           </p>
-
-  
         </div>
 
         <div class="research-group">
           <h3 class="research-subheading">Working Papers</h3>
 
           <ul class="research-list">
-            <li>Energy Costs and Household Financial Distress: Evidence from the Mortgage Market</li>
-            <li>Insurance, Endogenous Exposure, and the Welfare Cost of Disaster Risk</li>
+
+            <li class="paper-entry">
+              Energy Costs and Household Financial Distress: Evidence from the Mortgage Market
+
+              <div class="paper-actions">
+                <details>
+                  <summary>[Abstract]</summary>
+                  <p class="paper-abstract">
+                    This paper estimates the effect of household energy expenditure shocks on mortgage default risk. Using loan-level mortgage servicing data and a constructed measure of temperature-driven energy expenditures, I identify the effect by exploiting differences in the energy costs associated with comparable temperature shocks across properties and locations. A one-standard-deviation increase in average monthly predicted energy expenditures over the preceding year (approximately $17 per month) raises the monthly probability of entering delinquency by roughly 13 basis points, or 9% of the baseline rate. Fuel-specific falsification tests provide evidence that the estimated effects operate through household energy expenditures rather than other determinants of mortgage delinquency, while larger absolute effects among borrowers with lower credit scores are consistent with a liquidity mechanism. These findings identify recurring energy costs as a source of liquidity pressure contributing to mortgage default risk, and extend the energy affordability literature beyond expenditure burdens and consumption trade-offs to household credit outcomes.
+                  </p>
+                </details>
+
+                <a href="https://drive.google.com/file/d/1ZZhutB11BiZuCEYpv6Zz7b_oTcotJOcZ/view?usp=drive_link"
+                   target="_blank" rel="noopener">
+                  [PDF]
+                </a>
+              </div>
+            </li>
+
+            <li class="paper-entry">
+              Insurance, Endogenous Exposure, and the Welfare Cost of Disaster Risk
+
+              <div class="paper-actions">
+                <details>
+                  <summary>[Abstract]</summary>
+                  <p class="paper-abstract">
+                    Subsidized disaster insurance presents a welfare tradeoff: it provides a risk-sharing benefit but can increase exposure to disaster risk by shifting capital toward hazardous locations. This paper develops a tractable model of capital allocation under disaster risk that characterizes the welfare implications of this tradeoff. The model shows that, at the private optimum, the wedge between the social and private marginal cost of locating capital in one location rather than another is equal to the difference in their dollar pricing gaps — the gap between charged and full-cost premiums at each location. The spatial allocation of capital is therefore socially efficient if and only if dollar pricing gaps are equal across locations. Furthermore, the welfare cost of departures from this condition can be evaluated using a sufficient statistics approximation requiring only three empirical objects, and without estimation of a full spatial equilibrium model. I apply this framework to the National Flood Insurance Program, using administrative policy-level data to evaluate the welfare consequences of the NFIP’s transition from its legacy rating methodology to Risk Rating 2.0 (RR2), which applied full-risk pricing to newly issued policies beginning October 2021. For the insured stock in place immediately before RR2 took effect, I estimate annual welfare losses of approximately $19–$77 million associated with geographic differences in dollar pricing gaps under the legacy rating methodology, relative to a counterfactual of equal gaps across locations. Under RR2, I estimate approximately $42–$293 million in present-value welfare gains from the improved spatial allocation of new residential investment as charged premiums move toward modeled full-risk costs, relative to the indefinite continuation of the legacy rating methodology.
+                  </p>
+                </details>
+
+                <a href="https://drive.google.com/file/d/1ym_FLi2qbQGY5TeouYaUIoeZyNyv4Sor/view?usp=drive_link"
+                   target="_blank" rel="noopener">
+                  [PDF]
+                </a>
+              </div>
+            </li>
+
             <li>
               News and the Pricing of Environmental Risk
               <span class="paper-meta">(with Jaeyong Han, Paige Weber, and Christopher Timmins)</span>
             </li>
+
             <li>A History of Market Concentration in the U.S. Electricity Sector</li>
+
             <li>
               Modeling Need in Federal Energy Assistance
               <span class="paper-meta">(with Michelle Graff)</span>
             </li>
+
           </ul>
         </div>
 
@@ -307,7 +391,10 @@
           <ul class="research-list">
             <li>The Price Effects of Electric Utility Mergers Under Cost-of-Service Regulation</li>
             <li>The Distributional Impact of Property Tax Assessment Caps</li>
-            <li>Housing Precarity and the COVID-19 Pandemic <span class="paper-meta">(with Kay Jowers and Christopher Timmins; methodological update to NBER Working Paper No. 28394)</span> </li>
+            <li>
+              Housing Precarity and the COVID-19 Pandemic
+              <span class="paper-meta">(with Kay Jowers and Christopher Timmins; methodological update to NBER Working Paper No. 28394)</span>
+            </li>
           </ul>
         </div>
 
@@ -320,7 +407,7 @@
               “Electric Utility Mergers and Acquisitions: Economic Evidence, Regulatory Institutions, and Consumer Protections.”
               <span class="publication-meta"> Lead author, Nicholas Institute for Energy, Environment &amp; Sustainability Report, Forthcoming.</span>
             </li>
-            
+
             <li>
               “LIHEAP under heat: Assessing policy reforms and funding needs to address state energy burdens.”
               <span class="publication-meta"> Lead author, Nicholas Institute for Energy, Environment &amp; Sustainability Report, February 2026.</span>
@@ -345,14 +432,18 @@
               “Flooding and finances: Hurricane Harvey's impact on consumer credit.”
               <span class="publication-meta"> Co-author, Chicago Fed Letter, June 2021.</span>
             </li>
+
           </ul>
         </div>
       </section>
 
       <div class="advisor-link">
-        <a href="https://drive.google.com/drive/folders/1_PHf_wJBloc3LiULm0TXmPzwoigZU2ds?usp=drive_link" target="_blank" rel="noopener">For Advisors</a>
+        <a href="https://drive.google.com/drive/folders/1_PHf_wJBloc3LiULm0TXmPzwoigZU2ds?usp=drive_link"
+           target="_blank" rel="noopener">For Advisors</a>
       </div>
+
     </main>
   </div>
 </body>
 </html>
+
